@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container ">
+               <div class="header__inner">
+                    <a href="index.html" class="logo">
+                        <img src="images/lg.svg" alt="" class="logo__img">
+                    </a>
+                    <nav class="menu">
+                        <button class="menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <%- include('parts/menu', {menuItem:'works'}); %>
+                    </nav>
+               </div> 
+            </div>  
+        </header>
+        <main class="main">
+            <section class="choose">
+                <div class="container">
+                    <h2 class="section-title">
+                        Наши работы
+                    </h2>
+                    <div class="tabs">
+                        <div class="tabs__btn">
+                            <button class="tabs__btn-item tabs__btn-item--active" data-button="content-1">Покраска авто</button>
+                            <button class="tabs__btn-item" data-button="content-2">Кузовные работы</button>
+                            <button class="tabs__btn-item" data-button="content-3">Полировка</button>
+                            <button class="tabs__btn-item" data-button="content-4">Антихром</button>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__content-item tabs__content-item--active" id="content-1">
+                                <div class="card">
+                                    <img src="images/card-1.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Альфа Ромео 2023</h4>
+                                    <p class="card__text">полная покраска</p>
+                                    <p class="card__price">50 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-2.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">BMW 3M 2023</h4>
+                                    <p class="card__text">частичная покраска</p>
+                                    <p class="card__price">30 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-3.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ауди А5 2020</h4>
+                                    <p class="card__text">полная покраска</p>
+                                    <p class="card__price">60 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-4.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ситроен С5 2021</h4>
+                                    <p class="card__text">полная покраска</p>
+                                    <p class="card__price">45 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-1.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Альфа Ромео 2023</h4>
+                                    <p class="card__text">полная покраска</p>
+                                    <p class="card__price">50 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-2.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">BMW 3M 2023</h4>
+                                    <p class="card__text">частичная покраска</p>
+                                    <p class="card__price">30 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-10.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ниссан Тиида 2017</h4>
+                                    <p class="card__text">кузовные работы</p>
+                                    <p class="card__price">60 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-9.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Фольксваген Джетта 2015</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">40 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-8.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Тойота Каролла 2013</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">35 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-7.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Опель Астра 2015</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">40 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-6.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ауди А6 2019</h4>
+                                    <p class="card__text">антихром</p>
+                                    <p class="card__price">20 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-5.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Мерседес S-класс 2020</h4>
+                                    <p class="card__text">антихром</p>
+                                    <p class="card__price">25 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                            </div>
+                            <div class="tabs__content-item" id="content-2">
+                                <div class="card">
+                                    <img src="images/card-10.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ниссан Тиида 2017</h4>
+                                    <p class="card__text">кузовные работы</p>
+                                    <p class="card__price">60 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                            </div>
+                            <div class="tabs__content-item" id="content-3">
+                                <div class="card">
+                                    <img src="images/card-9.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Фольксваген Джетта 2015</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">40 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-8.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Тойота Каролла 2013</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">35 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-7.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Опель Астра 2015</h4>
+                                    <p class="card__text">полировка кузова</p>
+                                    <p class="card__price">40 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                            </div>
+                            <div class="tabs__content-item" id="content-4">
+                                <div class="card">
+                                    <img src="images/card-6.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Ауди А6 2019</h4>
+                                    <p class="card__text">антихром</p>
+                                    <p class="card__price">20 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-5.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                    <h4 class="card__title">Мерседес S-класс 2020</h4>
+                                    <p class="card__text">антихром</p>
+                                    <p class="card__price">25 тыс. руб.</p>
+                                    </div>
+                                    <a href="#" class="card__link">узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="showmore__link" href="blog.html">Показать больше</a>
+                </div>
+            </section>
+            <section class="blog">
+                <div class="container">
+                    <div class="blog__items">
+                        <div class="blog__item">
+                            <img class="blog__item-img" src="images/blog-1.jpg" alt="">
+                             <h4 class="blog__item-title">Какой тюнинг можно сделать</h4>
+                             <a href="blog.html" class="blog__item-link">Далее</a>
+                        </div>
+                        <div class="blog__item">
+                            <img class="blog__item-img" src="images/blog-2.jpg" alt="">
+                             <h4 class="blog__item-title">Какой тюнинг запрещен в России</h4>
+                             <a href="blog.html" class="blog__item-link">Далее</a>
+                        </div>
+                    </div>
+                    <a class="showmore__link" href="blog.html">Показать больше</a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Компания</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">О нас</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Услуги</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Новости</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Блог</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">FAQ</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Наши работы</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Портфолио</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Отзывы</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Контакты</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Связаться с нами</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Вакансии</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="app">
+                    <li class="app__item">
+                        <a href="#" class="app__links-item">
+                            <img src="images/instagram.svg" alt="" class="app__item-img">
+                        </a>
+                    </li>
+                    <li class="app__item">
+                        <a href="#" class="app__links-item">
+                            <img src="images/vkontakte.svg" alt="" class="app__item-img">
+                        </a>
+                    </li>
+                    <li class="app__item">
+                        <a href="#" class="app__links-item">
+                            <img src="images/youtube.svg" alt="" class="app__item-img">
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copy">
+                    <p class="footer__copy-text">Телефон: 8 (988) 533-22-01
+                    </p>
+                    <p class="footer__copy-text">Адрес: Максима Горького, 727г (Ростовская область, Азовский район, пос. Койсуг)
+                    </p>
+                </div>
+                <nav class="copy__nav">
+                    <ul class="copy__nav-list">
+                        <li class="copy__nav-item">
+                            <a href="#" class="copy__nav-link">© CarFix Studio, 2024. Весь контент, размещенный на данном сайте является авторским и принадлежит CarFix Studio.</a>
+                        </li>
+                        <li class="copy__nav-item">
+                            <a href="#" class="copy__nav-link">Разработчик: KODO</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
