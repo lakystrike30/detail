@@ -8,13 +8,30 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!!!!!!!!!' })
 })
 
-app.get('/works',(req, res) => {
-    res.render('works')
+app.get('/works.ejs', (req, res) => {
+    res.render('works', {myTitle: 'works'})
 })
 
-app.get('/contacts', (req, res) => {
-    res.render('contacts', {myTitle: 'контакты'})
+app.get('/contacts.ejs', (req, res) => {
+    res.render('contacts', {myTitle: 'contacts'})
 })
+
+app.get('/blog.ejs', (req, res) => {
+    res.render('blog', {myTitle: 'blog'})
+})
+
+app.get('/faq.ejs', (req, res) => {
+    res.render('faq', {myTitle: 'faq'})
+})
+
+app.get('/otzivi.ejs', (req, res) => {
+    res.render('otzivi', {myTitle: 'otzivi'})
+})
+
+app.get('/vacan.ejs', (req, res) => {
+    res.render('vacan', {myTitle: 'vacan'})
+})
+
 // app.get('/test', (req, res) => {
 //     res.render('test', { title: 'Hey', message: 'Hello there!' })
 // }) 

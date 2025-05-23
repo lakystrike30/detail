@@ -15,24 +15,16 @@
         <header class="header">
             <div class="container ">
                <div class="header__inner">
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <img src="images/lg.svg" alt="" class="logo__img">
                     </a>
                     <nav class="menu">
-                     <ul class="menu__list">
-                       <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">О НАС</a>
-                       </li>
-                       <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">УСЛУГИ</a>
-                       </li>
-                       <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">НАШИ РАБОТЫ</a>
-                       </li>
-                       <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">КОНТАКТЫ</a>
-                       </li>
-                     </ul>
+                        <button class="menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <%- include('parts/menu', {menuItem:'contacts'}); %>
                     </nav>
                </div> 
             </div>  
@@ -42,7 +34,7 @@
                 <div class="container">
                     <h2 class="section-title vacan__title">Работа в Carfix Studio!</h2>
                     <p class="vacan__text">
-                        Информации по вакансиям в Carfix Studio нет!
+                        Информации по вакансиям в Carfix Studio пока нет!
                     </p>
                 </div>
             </section>
@@ -55,10 +47,10 @@
                             <p class="footer__menu-title">Компания</p>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="index.html" class="footer__menu-link">О нас</a>
+                            <a href="/" class="footer__menu-link">О нас</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">Услуги</a>
+                            <a href="/" class="footer__menu-link">Услуги</a>
                         </li>
                     </ul>
                     <ul class="footer__menu-list">
@@ -66,10 +58,10 @@
                             <p class="footer__menu-title">Новости</p>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">Блог</a>
+                            <a href="blog.ejs" class="footer__menu-link">Блог</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">FAQ</a>
+                            <a href="faq.ejs" class="footer__menu-link">FAQ</a>
                         </li>
                     </ul>
                     <ul class="footer__menu-list">
@@ -77,10 +69,10 @@
                             <p class="footer__menu-title">Наши работы</p>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">Портфолио</a>
+                            <a href="works.ejs" class="footer__menu-link">Портфолио</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">Отзывы</a>
+                            <a href="otzivi.ejs" class="footer__menu-link">Отзывы</a>
                         </li>
                     </ul>
                     <ul class="footer__menu-list">
@@ -88,10 +80,10 @@
                             <p class="footer__menu-title">Контакты</p>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="contacts.html" class="footer__menu-link">Связаться с нами</a>
+                            <a href="contacts.ejs" class="footer__menu-link">Связаться с нами</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="vacan.html" class="footer__menu-link">Вакансии</a>
+                            <a href="vacan.ejs" class="footer__menu-link">Вакансии</a>
                         </li>
                     </ul>
                 </nav>
@@ -115,13 +107,17 @@
                 <div class="footer__copy">
                     <p class="footer__copy-text">Телефон: 8 (988) 533-22-01
                     </p>
-                    <p class="footer__copy-text">Адрес: Максима Горького, 727г (Ростовская область, Азовский район, пос. Койсуг)
+                    <p class="footer__copy-text">Адрес: Сосновая улица 31
+                    </p>
+                    <p class="footer__copy-text">Ростовская область, Аксайский район, Щепкинское сельское поселение,
+                    </p>
+                    <p class="footer__copy-text">хутор Нижнетемерницкий, коттеджный поселок Прилесный
                     </p>
                 </div>
                 <nav class="copy__nav">
                     <ul class="copy__nav-list">
                         <li class="copy__nav-item">
-                            <a href="#" class="copy__nav-link">© CarFix Studio, 2024. Весь контент, размещенный на данном сайте является авторским и принадлежит CarFix Studio.</a>
+                            <a href="#" class="copy__nav-link">© CarFix Studio, 2025. Весь контент, размещенный на данном сайте является авторским и принадлежит CarFix Studio.</a>
                         </li>
                         <li class="copy__nav-item">
                             <a href="#" class="copy__nav-link">Разработчик: KODO</a>
