@@ -36,11 +36,11 @@
                     <p class="contacts__text">
                         Вы можете записаться к нам в студию или оставить свой отзыв! Мы обязательно Вам перезвоним!
                     </p>
-                    <form action="" class="form">
-                        <input type="text" class="form__input" placeholder="Ваше имя">
-                        <input type="email" class="form__input" placeholder="E-mail">
-                        <textarea class="form__textarea" placeholder="Ваш текст..."></textarea>
-                        <button class="form__btn" type="submit">Отправить</button>
+                    <form method="post">
+                        <input type="text" class="form__input" name="userName" placeholder="Ваше имя">
+                        <input type="tel" class="form__input" name="userTel" placeholder="Телефон">
+                        <textarea class="form__textarea" name="userText" placeholder="Ваш текст..."></textarea>
+                        <button class="form__btn" type="submit" name="send">Отправить</button>
                     </form>
                 </div>
             </section>
