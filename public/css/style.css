@@ -321,7 +321,7 @@ margin: 0 auto 50px;
 
 .mastera__list{
 display: grid;    
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 }
 
 .mastera__item{
@@ -528,7 +528,7 @@ margin-bottom: 20px;
 .card__price{   
 margin-bottom: 20px;
 font-weight: 700;
-font-size: 24px;
+font-size: 20px;
 }
 
 .card__link{
