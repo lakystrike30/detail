@@ -32,25 +32,6 @@ app.get('/vacan.ejs', (req, res) => {
     res.render('vacan', {myTitle: 'vacan'})
 })
 
-// создаем парсер для данных application/x-www-form-urlencoded
-const urlencodedParser = express.urlencoded({extended: false});
-  
-app.get('/contacts.ejs', function (_, response) {
-    response.sendFile(__dirname + '/contacts.ejs');
-});
-app.post('/contacts.ejs', urlencodedParser, function (request, response) {
-    if(!request.body) return response.sendStatus(400);
-    console.log(request.body);
-    response.send(`${request.body.userName} - ${request.body.userTel} - ${request.body.userText}`);
-});
-
-
-// app.get('/test', (req, res) => {
-//     res.render('test', { title: 'Hey', message: 'Hello there!' })
-// }) 
-// app.get('/layout', (req, res) => {
-//     res.send('Layout!')
-// })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
