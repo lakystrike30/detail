@@ -1,11 +1,35 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const nodemailer = require('nodemailer');
+const app = express();
 const port = 3100
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!!!!!!!!!' })
+})
+
+app.post('/api/feedback', (req, res) => {
+    try {
+
+       const transporter = nodemailer.createTransport({
+            host: "smpt.mail.ru",
+            port: 465,
+            secure: true,
+            auth: {
+                user: "alex.shado88@mail.ru",
+                pass: "WF3XwypYJdvJQKcxJSQm",
+
+            }
+       });
+
+
+    } catch (e) {
+        return res.status(500).send({
+            status: 500,
+            message: 'Ошибка при запросе'
+        });
+    }
 })
 
 app.get('/works.ejs', (req, res) => {
