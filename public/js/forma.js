@@ -1,6 +1,6 @@
 const FEEDBACK_FORM = document.querySelector('#feedback-form');
 
-  function sendFeedback(){
+  function sendFeedback(feedback){
     fetch("/api/feedback",{
       method: 'POST',
       headers: {

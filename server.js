@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!!!!!!!!!' })
 })
 
-app.post('/api/feedback', (req, res) => {
+app.post('/api/feedback', async(req, res) => {
     try {
 
        const transporter = nodemailer.createTransport({
@@ -17,12 +17,24 @@ app.post('/api/feedback', (req, res) => {
             port: 465,
             secure: true,
             auth: {
-                user: "alex.shado88@mail.ru",
+                user: "alex.shadow88@mail.ru",
                 pass: "WF3XwypYJdvJQKcxJSQm",
-
             }
        });
 
+       const {name, phone, message} = req.body;
+
+       await transporter.sendMail({
+        from: "alex.shadow88@mail.ru",
+        to: "alex.shadow88@mail.ru",
+        subject: "Тема письма",
+        text: `${name} ${phone} ${message}`,
+       });
+
+       return res.status(200).send({
+        status: 200,
+        message: 'Успешная отправка'
+       })
 
     } catch (e) {
         return res.status(500).send({
@@ -31,6 +43,9 @@ app.post('/api/feedback', (req, res) => {
         });
     }
 })
+
+
+
 
 app.get('/works.ejs', (req, res) => {
     res.render('works', {myTitle: 'works'})
