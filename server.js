@@ -35,6 +35,13 @@ app.post('/api/feedback', async(req, res) => {
         to: "alex.shadow88@mail.ru",
         subject: "Тема письма",
         text: `${name} ${phone} ${message}`,
+        html: 
+        `
+        <p>${name}</p>
+        <p>${phone}</p>
+        <p>${message}</p>
+
+        `
        });
 
        return res.status(200).send({
