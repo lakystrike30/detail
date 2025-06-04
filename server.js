@@ -1,9 +1,14 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3100
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!!!!!!!!!' })
@@ -23,6 +28,7 @@ app.post('/api/feedback', async(req, res) => {
        });
 
        const {name, phone, message} = req.body;
+    
 
        await transporter.sendMail({
         from: "alex.shadow88@mail.ru",
@@ -37,15 +43,13 @@ app.post('/api/feedback', async(req, res) => {
        })
 
     } catch (e) {
-        return res.status(500).send({
-            status: 500,
-            message: 'Ошибка при запросе'
+    //    return console.error(e);
+        res.status(500).send({
+        status: 500,
+           message: 'Ошибка при запросе'
         });
     }
 })
-
-
-
 
 app.get('/works.ejs', (req, res) => {
     res.render('works', {myTitle: 'works'})

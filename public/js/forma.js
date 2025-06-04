@@ -4,7 +4,7 @@ const FEEDBACK_FORM = document.querySelector('#feedback-form');
     fetch("/api/feedback",{
       method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": 'application/json'
       },
       body: JSON.stringify(feedback),
     }).then((response)=>response.json()).then(data =>{
